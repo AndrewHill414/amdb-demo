@@ -4,6 +4,9 @@
     <router-link :to="{ name: 'Tasks' }">DEV LOGIN</router-link>
   </div>
   <router-view />
+  <div class="footer">
+    Ⓒ 2022 Ideal Innovations, Inc & Future Research Corporation
+  </div>
 </template>
 
 <script>
@@ -32,5 +35,14 @@ body {
   text-decoration: none;
   padding: 10px;
   border-radius: 4px;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #eee;
+  color: black;
+  text-align: center;
 }
 </style>

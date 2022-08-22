@@ -5,6 +5,9 @@
       <h2>{{ task.title }}</h2>
     </router-link>
   </div>
+  <div class="footer">
+    Ⓒ 2022 Ideal Innovations, Inc & Future Research Corporation
+  </div>
 </template>
 
 <script>
@@ -12,11 +15,19 @@ export default {
   data() {
     return {
       tasks: [
-        { title: "Insert Or Serch", id: 1, details: "lorem" },
-        { title: "Asset Metrics", id: 2, details: "lorem" },
-        { title: "Multi-Item Update", id: 3, details: "lorem" },
-        { title: "Data Search", id: 4, details: "lorem" },
-        { title: "Anticipated Assets", id: 5, details: "lorem" },
+        { title: "Insert Or Serch", id: "Insert or Search", details: "lorem" },
+        { title: "Asset Metrics", id: "Asset Metrics", details: "lorem" },
+        {
+          title: "Multi-Item Update",
+          id: "Multi-Item Update",
+          details: "lorem",
+        },
+        { title: "Data Search", id: "Data Search", details: "lorem" },
+        {
+          title: "Anticipated Assets",
+          id: "Anticipated Assets",
+          details: "lorem",
+        },
       ],
     };
   },

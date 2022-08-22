@@ -1,17 +1,19 @@
 <template>
-  <h1>{{ title }}</h1>
-  <p>The Task ID is {{ id }}</p>
+  <h1>You are currently in:</h1>
+  <h2>{{ id }}</h2>
+  <div class="footer">
+    Ⓒ 2022 Ideal Innovations, Inc & Future Research Corporation
+  </div>
 </template>
 
 <script>
 export default {
-  props: ["id", "title"],
-
-  // data () {
-  //     return {
-  //         id: this.$route.params.id
-  //             }
-  // }
+  //props: ["id"],
+  data() {
+    return {
+      id: this.$route.params.id,
+    };
+  },
 };
 </script>
 
