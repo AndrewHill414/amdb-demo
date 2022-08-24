@@ -5,6 +5,20 @@
       <h2>{{ task.title }}</h2>
     </router-link>
   </div>
+  <button
+    @click="back"
+    style="
+      background: #8a8a8a;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 10px auto;
+      max-width: 600px;
+      cursor: pointer;
+      color: #eee;
+    "
+  >
+    Back
+  </button>
   <div class="footer">
     Ⓒ 2022 Ideal Innovations, Inc & Future Research Corporation
   </div>
@@ -12,6 +26,11 @@
 
 <script>
 export default {
+  methods: {
+    back() {
+      this.$router.go(-1);
+    },
+  },
   data() {
     return {
       tasks: [

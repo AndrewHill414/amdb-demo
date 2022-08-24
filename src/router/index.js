@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/HomeView.vue";
-import About from "../views/AboutView.vue";
+import NotFound from "../views/NotFound.vue";
 import Tasks from "../views/Tasks.vue";
 import TaskDetails from "../views/TaskDetails.vue";
 
@@ -11,11 +11,6 @@ const routes = [
     component: Home,
   },
   {
-    path: "/about",
-    name: "About",
-    component: About,
-  },
-  {
     path: "/tasks",
     name: "Tasks",
     component: Tasks,
@@ -24,6 +19,13 @@ const routes = [
     path: "/tasks/:id",
     name: "TaskDetails",
     component: TaskDetails,
+    props: true,
+  },
+  // 404 catchall
+  {
+    path: "/:catchAll(.*)",
+    name: "NotFound",
+    component: NotFound,
   },
 ];
 

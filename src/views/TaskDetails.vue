@@ -1,6 +1,19 @@
 <template>
-  <h1>You are currently in:</h1>
   <h2>{{ id }}</h2>
+  <button
+    @click="back"
+    style="
+      background: #8a8a8a;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 10px auto;
+      max-width: 600px;
+      cursor: pointer;
+      color: #eee;
+    "
+  >
+    Back
+  </button>
   <div class="footer">
     Ⓒ 2022 Ideal Innovations, Inc & Future Research Corporation
   </div>
@@ -8,12 +21,12 @@
 
 <script>
 export default {
-  //props: ["id"],
-  data() {
-    return {
-      id: this.$route.params.id,
-    };
+  methods: {
+    back() {
+      this.$router.go(-1);
+    },
   },
+  props: ["id"],
 };
 </script>
 

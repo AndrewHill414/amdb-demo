@@ -9,9 +9,7 @@
   </div>
 </template>
 
-<script>
-/* eslint-disable */
-</script>
+<script></script>
 
 <style>
 #app {
@@ -44,5 +42,11 @@ body {
   background-color: #eee;
   color: black;
   text-align: center;
+}
+.button {
+  margin: 0 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
 }
 </style>

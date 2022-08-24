@@ -4,28 +4,37 @@
   </div>
   <form @submit.prevent="handleSubmit">
     <label>Username:</label>
-    <input type="username" v-model="username" required />
-
+    <input type="username" required v-model="username" />
     <label>Password:</label>
     <input type="password" v-model="password" required />
     <div v-if="passwordError" class="error">{{ passwordError }}</div>
 
     <div class="submit">
-      <button>Login</button>
+      <button class="bg-sky-500 hover:bg-sky-700 ...">Login</button>
     </div>
   </form>
-  <p>Powered By:</p>
+  <!-- <p>Powered By:</p>
   <img :src="require('./FRC logo2.jpg')" />
-  <img :src="require('./I3 Logo.webp')" />
+  <img
+    :src="require('./I3 Logo.webp')"
+    url="https://www.idealinnovations.com/"
+  /> -->
 </template>
 
 <script>
 import image from "./DB.png";
+import { ref } from "vue";
 export default {
+  setup() {
+    const username = ref("");
+    const password = ref("");
+
+    const handleSubmit = () => {
+      console.log(username.value, password.value);
+    };
+  },
   data() {
     return {
-      username: "",
-      password: "",
       passwordError: null,
       image: image,
     };
@@ -96,7 +105,7 @@ input[type="checkbox"] {
   color: #777;
   cursor: pointer;
 }
-button {
+ button {
   background: #0b6dff;
   border: 0;
   padding: 10px 20px;
@@ -105,6 +114,9 @@ button {
   border-radius: 20px;
   font-weight: bold;
 }
+button.hover {
+  background: rgb(255, 0, 0);
+} 
 .submit {
   text-align: center;
 }
