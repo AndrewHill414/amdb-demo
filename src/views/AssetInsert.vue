@@ -1,5 +1,5 @@
 <template>
-  <h1>Tasks</h1>
+  <h1>Asset Insert</h1>
   <div v-for="task in tasks" :key="task.id" class="task">
     <router-link :to="{ name: 'TaskDetails', params: { id: task.id } }">
       <h2>{{ task.title }}</h2>
@@ -34,22 +34,8 @@ export default {
   data() {
     return {
       tasks: [
-        { title: "Asset Insert", id: "Asset Insert", details: "lorem" },
-        { title: "Asset Metrics", id: "Asset Metrics", details: "lorem" },
-        {
-          title: "Multi-Item Update",
-          id: "Multi-Item Update",
-          details: "lorem",
-        },
-        { title: "Data Search", id: "Data Search", details: "lorem" },
-        {
-          title: "Anticipated Assets",
-          id: "Anticipated Assets",
-          details: "lorem",
-        },
-        { title: "Admin Logistics", id: "Admin Logistics", details: "lorem" },
-        { title: "Activity Log", id: "Activity Log", details: "lorem" },
-        { title: "Unplaced Data", id: "Unplaced Data", details: "lorem" },
+        { title: "Hardware", id: "Hardware", details: "lorem" },
+        { title: "Software", id: "Software", details: "lorem" },
       ],
     };
   },

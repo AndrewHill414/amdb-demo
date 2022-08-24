@@ -3,6 +3,7 @@ import Home from "../views/HomeView.vue";
 import NotFound from "../views/NotFound.vue";
 import Tasks from "../views/Tasks.vue";
 import TaskDetails from "../views/TaskDetails.vue";
+import AssetInsert from "../views/AssetInsert.vue";
 
 const routes = [
   {
@@ -26,6 +27,11 @@ const routes = [
     path: "/:catchAll(.*)",
     name: "NotFound",
     component: NotFound,
+  },
+  {
+    path: "/AssetInsert",
+    name: "AssetInsert",
+    component: AssetInsert,
   },
 ];
 

@@ -10,7 +10,7 @@
     <div v-if="passwordError" class="error">{{ passwordError }}</div>
 
     <div class="submit">
-      <button class="bg-sky-500 hover:bg-sky-700 ...">Login</button>
+      <button @click="handleSubmit">Login</button>
     </div>
   </form>
   <!-- <p>Powered By:</p>
@@ -105,7 +105,7 @@ input[type="checkbox"] {
   color: #777;
   cursor: pointer;
 }
- button {
+button {
   background: #0b6dff;
   border: 0;
   padding: 10px 20px;
@@ -116,7 +116,7 @@ input[type="checkbox"] {
 }
 button.hover {
   background: rgb(255, 0, 0);
-} 
+}
 .submit {
   text-align: center;
 }
